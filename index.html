@@ -3,28 +3,142 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CS180/280A Portfolio - Rin Kagamine</title>
+  <title>CS180/280A Portfolio · Rin-Kagamine</title>
+
+  <meta name="description" content="CS180/280A portfolio: projects, write-ups, and demos." />
+  <meta name="color-scheme" content="light dark" />
+
   <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
-  <header class="container">
-    <h1>CS180 / 280A Portfolio</h1>
-    <p class="muted">
-      Rin-Kagamine · <a href="https://github.com/Rin-Kagamine">GitHub</a>
-    </p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./">
+        <span class="brand-dot"></span>
+        <span>Rin-Kagamine</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="https://github.com/Rin-Kagamine" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="container">
-    <section class="card">
-      <h2>Projects</h2>
-      <ul>
-        <li><a href="./1/">Project 1</a></li>
-      </ul>
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <p class="pill">UC Berkeley · CS180 / 280A</p>
+          <h1 class="hero-title">Computer Vision & Graphics Portfolio</h1>
+          <p class="hero-subtitle">
+            Write-ups, qualitative results, and demos. Built with plain HTML/CSS and hosted on GitHub Pages.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#projects">View projects</a>
+            <a class="btn btn-ghost" href="mailto:tuoge_xhs@berkeley.edu">Contact</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="stat">
+            <div class="stat-k">Goal</div>
+            <div class="stat-v">Clear, grade-friendly write-ups</div>
+          </div>
+          <div class="stat">
+            <div class="stat-k">Style</div>
+            <div class="stat-v">Minimal, readable, responsive</div>
+          </div>
+          <div class="stat">
+            <div class="stat-k">Update</div>
+            <div class="stat-v"><span id="last-updated">—</span></div>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p class="muted">Click a card to open the full write-up.</p>
+        </div>
+
+        <div class="grid">
+          <a class="card card-link" href="./1/">
+            <div class="card-top">
+              <h3>Project 1</h3>
+              <span class="badge">Write-up</span>
+            </div>
+            <p class="muted">
+              Short description (what problem, your method, what you achieved).
+            </p>
+            <div class="tags">
+              <span class="tag">CV</span>
+              <span class="tag">Implementation</span>
+              <span class="tag">Results</span>
+            </div>
+          </a>
+
+          <!-- 你以后加 Project 2/3 就复制这个卡片块 -->
+          <div class="card card-dim">
+            <div class="card-top">
+              <h3>Project 2</h3>
+              <span class="badge badge-dim">Coming</span>
+            </div>
+            <p class="muted">Placeholder card. Add ./2/ when you’re ready.</p>
+            <div class="tags">
+              <span class="tag">TBD</span>
+            </div>
+          </div>
+
+          <div class="card card-dim">
+            <div class="card-top">
+              <h3>Final</h3>
+              <span class="badge badge-dim">Coming</span>
+            </div>
+            <p class="muted">Final project write-up and demo will go here.</p>
+            <div class="tags">
+              <span class="tag">TBD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>About</h2>
+          <p class="muted">A few lines that help the reader understand you.</p>
+        </div>
+
+        <div class="card">
+          <p>
+            I’m Rin-Kagamine. This site documents my work for CS180/280A with clear write-ups,
+            reproducible settings, and visual comparisons.
+          </p>
+          <p class="muted">
+            Tip: keep each project page structured (Overview → Method → Experiments → Results → Takeaways).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span class="muted">© <span id="year"></span> Rin-Kagamine</span>
+        <span class="muted">Hosted on GitHub Pages</span>
+      </div>
+    </footer>
   </main>
 
-  <footer class="container muted">
-    <p>Hosted on GitHub Pages.</p>
-  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("last-updated").textContent = new Date().toLocaleDateString();
+  </script>
 </body>
 </html>
